@@ -1,7 +1,13 @@
-package p03.c01;
+package src.p03.c01;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+
+/**
+ * @author Pablo Marcos Bravo
+ * @since JDK 11
+ * @version 2.0
+ */ 
 
 public class Parque implements IParque{
 
