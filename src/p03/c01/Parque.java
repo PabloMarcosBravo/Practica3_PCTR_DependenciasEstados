@@ -16,22 +16,28 @@ public class Parque implements IParque{
 	private Hashtable<String, Integer> contadoresPersonasPuerta;
 	
 	
-	public Parque() {	// TODO
+	public Parque() {	
 		contadorPersonasTotales = 0;
 		contadoresPersonasPuerta = new Hashtable<String, Integer>();
-		// TODO
 	}
 
 
 	@Override
-	public void entrarAlParque(String puerta){		// TODO
+	public void entrarAlParque(String puerta){		
+		if(!this.contadoresPersonasPuerta.containsKey("A"))
+			this.contadoresPersonasPuerta.put("A", 0);
+		else if(!this.contadoresPersonasPuerta.containsKey("B"))
+			this.contadoresPersonasPuerta.put("B", 0);
+		else if(!this.contadoresPersonasPuerta.containsKey("C"))
+			this.contadoresPersonasPuerta.put("C", 0);
+		else if(!this.contadoresPersonasPuerta.containsKey("D"))
+			this.contadoresPersonasPuerta.put("D", 0);
 		
 		// Si no hay entradas por esa puerta, inicializamos
 		if (contadoresPersonasPuerta.get(puerta) == null){
 			contadoresPersonasPuerta.put(puerta, 0);
 		}
 		
-		// TODO
 				
 		
 		// Aumentamos el contador total y el individual
@@ -40,16 +46,19 @@ public class Parque implements IParque{
 		
 		// Imprimimos el estado del parque
 		imprimirInfo(puerta, "Entrada");
+		System.out.print("Entrada al parque por puerta " + puerta + "\n");
+		System.out.print("--> Personas en el parque " + contadorPersonasTotales + "\n");
+		System.out.print("----> Por puerta A " + this.contadoresPersonasPuerta.get("A") + "\n");
+		System.out.print("----> Por puerta B " + this.contadoresPersonasPuerta.get("B") + "\n");
+		System.out.print("----> Por puerta C " + this.contadoresPersonasPuerta.get("C") + "\n");
+		System.out.print("----> Por puerta D " + this.contadoresPersonasPuerta.get("D") + "\n");
 		
-		// TODO
-		
-		
-		// TODO
+	
 		
 	}
 	
 	// 
-	// TODO Método salirDelParque
+	// TODO Metodo salirDelParque
 	//
 	
 	
@@ -75,20 +84,15 @@ public class Parque implements IParque{
 	
 	protected void checkInvariante() {
 		assert sumarContadoresPuerta() == contadorPersonasTotales : "INV: La suma de contadores de las puertas debe ser igual al valor del contador del parte";
-		// TODO 
-		// TODO
+		
 	}
 
 	protected void comprobarAntesDeEntrar(){	// TODO
-		//
-		// TODO
-		//
+		int contador = 0;
 	}
 
 	protected void comprobarAntesDeSalir(){		// TODO
-		//
-		// TODO
-		//
+		
 	}
 
 
