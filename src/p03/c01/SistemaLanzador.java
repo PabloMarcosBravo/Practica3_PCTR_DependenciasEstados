@@ -1,9 +1,8 @@
 package src.p03.c01;
 
-import src.p03.c01.ActividadEntradaPuerta;
-import src.p03.c01.ActividadSalidaPuerta;
-
 /**
+ * Clase que lanza por pantalla la salida del programa
+ * 
  * @author Pablo Marcos Bravo
  * @author Jorge Fernandez Moreno
  * 
@@ -23,7 +22,7 @@ public class SistemaLanzador {
 
 			String puerta = "" + ((char) (letra_puerta++));
 
-			// Creación de hilos de entrada
+			// Creacion de hilos de entrada
 			ActividadEntradaPuerta entradas = new ActividadEntradaPuerta(puerta, parque);
 			new Thread(entradas).start();
 
