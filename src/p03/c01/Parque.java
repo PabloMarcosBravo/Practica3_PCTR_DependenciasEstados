@@ -125,7 +125,6 @@ public class Parque implements IParque{
 		}
 	}
 
-	
 	/**
 	 * Metodo que comprueba que la persona pueda salir
 	 * @throws InterruptedException
