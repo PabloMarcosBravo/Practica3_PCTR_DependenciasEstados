@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 /**
  * @author Pablo Marcos Bravo
+ * @author Jorge Fernandez Moreno
  * @since JDK 11
  * @version 2.0
  */
