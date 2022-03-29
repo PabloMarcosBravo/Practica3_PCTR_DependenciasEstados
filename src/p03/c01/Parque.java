@@ -26,10 +26,10 @@ public class Parque implements IParque{
 	}
 
 	/**
-	 * Método que analiza las personas que entran por puerta
+	 * Mï¿½todo que analiza las personas que entran por puerta
 	 */
 	@Override
-	public void entrarAlParque(String puerta){		
+	public synchronized void entrarAlParque(String puerta){		
 		// Si no hay entradas por esa puerta, inicializamos
 		if (contadoresPersonasPuerta.get(puerta) == null){
 			contadoresPersonasPuerta.put(puerta, 0);
@@ -53,7 +53,7 @@ public class Parque implements IParque{
 	}
 	
 	/**
-	 * Método que analiza las personas que salen por puerta	 * 
+	 * Mï¿½todo que analiza las personas que salen por puerta	 * 
 	 */
 	public synchronized void salirDelParque(String puerta) {
 
@@ -111,7 +111,7 @@ public class Parque implements IParque{
 	
 	protected void checkInvariante() {
 		assert sumarContadoresPuerta() == contadorPersonasTotales : "INV: La suma de contadores de las puertas debe ser igual al valor del contador del parte";
-		assert contadorPersonasTotales <= Max_personas : "INV: Hay más personas que capacidad";
+		assert contadorPersonasTotales <= Max_personas : "INV: Hay mï¿½s personas que capacidad";
 		assert contadorPersonasTotales >= 0 : "INV: No hay valores negativos";
 	}
 
